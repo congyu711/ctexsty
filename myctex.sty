@@ -1,5 +1,6 @@
 \ProvidesPackage{myctex}
 \usepackage[fontset=none, scheme=plain]{ctex}
+\usepackage{fontspec}
 
 \newif\ifmyctex@sans
 \myctex@sansfalse % Default is serif
@@ -11,22 +12,17 @@
 
 % Now use the conditional
 \ifmyctex@sans
-  \renewcommand{\ttdefault}{lmtt}
-  \setCJKmainfont{Source Han Sans SC}
-  \setCJKsansfont{Source Han Sans SC}
-  \setCJKmonofont{Source Han Sans SC}
-  \RequirePackage{unicode-math}
-  \unimathsetup{math-style=ISO, bold-style=ISO, mathrm=sym}
-	\setmainfont{FiraGO}[BoldFont=* SemiBold, Numbers=Monospaced]
-	\setsansfont{FiraGO}[BoldFont=* SemiBold, Numbers=Monospaced]
-	\setmathfont{Fira Math}[BoldFont=*-SemiBold]
-  % texttt is not using the correct font
-  
-  \else
-  \setCJKmainfont{Source Han Serif SC}
-  \setCJKsansfont{Source Han Serif SC}
-  \setCJKmonofont{Source Han Serif SC}
-  \RequirePackage[charter]{mathdesign} % math font only for serif mode
+\setCJKmainfont{Source Han Sans SC}
+\setCJKsansfont{Source Han Sans SC}
+\setCJKmonofont{Source Han Sans SC}
+\usepackage[fira]{fontsetup}
+\usepackage{FiraMono}
+
+\else
+\setCJKmainfont{Source Han Serif SC}
+\setCJKsansfont{Source Han Serif SC}
+\setCJKmonofont{Source Han Serif SC}
+\RequirePackage[charter]{mathdesign} % math font only for serif mode
 \fi
 
 % \setCJKmainfont{SourceHanSerifSC-Regular.otf}[BoldFont={SourceHanSerifSC-Bold.otf}, ItalicFont=SourceHanSerifSC-Regular.otf]
@@ -45,7 +41,6 @@
 
 \RequirePackage{graphicx} % essentials
 % \RequirePackage{microtype}
-\RequirePackage{berasans, beramono}
 \RequirePackage{eucal}
 \RequirePackage[nocompress]{cite}       % other convenient stuff
 \RequirePackage{enumerate}
