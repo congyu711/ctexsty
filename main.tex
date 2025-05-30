@@ -5,24 +5,31 @@
 
 
 \title{思源黑体 + FiraGO}
+\author{丛宇}
 \date{\today}
 
 \begin{document}
 \maketitle
 
 test math font.
-
-\[
+\(
 G'=(V,E)
-\]
-\textbf{math!!! 粗的!}
-$MATH$
+\)
 
-\section{is this bold $MATH \Z$?}
+测试中文
+
+\textbf{粗中文a}
+
+$\mathbf{Bold Math}$
+
+\section{$Bold \; MATH \Z\R \Q$ in title  $\mathbf{Bold Math \Z \R \Q}$?}
 \section{这是bold $\text{你好abc}\R$?}
 \begin{theorem}[sbada]
     aaa 中文
 \end{theorem}
+\begin{proof}
+    test setminus and qed $A\setminus B$
+\end{proof}
 
 \begin{equation}
 \begin{aligned}
@@ -40,7 +47,11 @@ return ss
 \end{algo}
 \caption{this is a fig 这是图}
 \end{figure}
-\textsc{Sans}
-\texttt{monolM}
+
+\textsc{Small Capital}
+
+\textit{italic}
+
+\texttt{mono}
 
 \end{document}

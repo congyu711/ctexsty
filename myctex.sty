@@ -1,6 +1,6 @@
 \ProvidesPackage{myctex}
-\usepackage[fontset=none, scheme=plain]{ctex}
-\usepackage{fontspec}
+\RequirePackage[fontset=none, scheme=plain]{ctex}
+\RequirePackage{fontspec}
 
 \newif\ifmyctex@sans
 \myctex@sansfalse % Default is serif
@@ -15,8 +15,9 @@
 \setCJKmainfont{Source Han Sans SC}[BoldFont=*, ItalicFont=*]
 \setCJKsansfont{Source Han Sans SC}
 \setCJKmonofont{Source Han Sans SC}
-\usepackage[fira]{fontsetup}
-\usepackage{FiraMono}
+\RequirePackage[fira]{fontsetup}
+\RequirePackage{FiraMono}
+\setmathfont{Fira Math}[range=\setminus]
 
 \else
 \setCJKmainfont{Source Han Serif SC}[BoldFont=*, ItalicFont=*]
@@ -95,10 +96,10 @@
 % ----------------------------------------------------------------------
 
 \def\etal{\emph{et~al.}}            % and others
-%\def\ie{\emph{i.e.}}           % that is
-\def\ie{\textcolor{red}{that is}}
-%\def\eg{\emph{e.g.}}           % for example
-\def\eg{\textcolor{red}{for example}}
+\def\ie{\emph{i.e.}}           % that is
+% \def\ie{\textcolor{red}{that is}}
+\def\eg{\emph{e.g.}}           % for example
+% \def\eg{\textcolor{red}{for example}}
 
 % -----------------------
 % Common Names
@@ -109,14 +110,14 @@
 % useful shortcuts
 % -----------------------
 
-\def\cost{\cent}
+% \def\cost{\cent}
 
 % ----------------------------------------------------------------------
 %  Simple math stuff
 % ----------------------------------------------------------------------
-\renewcommand{\subset}{\subseteq}
+% \renewcommand{\subset}{\subseteq}
 % ---- SYMBOLS ----
-\let\e\varepsilon               % a ``real'' epsilon — better yet, just use Unicode ε.
+\let\e\epsilon               % a ``real'' epsilon — better yet, just use Unicode ε.
 %
 %  I give up.  These are in the wrong font, but my kludged versions 
 %  LOOK like kludges, especially \Z, \Q, and \C.
@@ -316,9 +317,9 @@
 \newif\ifneedqed
 \global\needqedfalse
 \@ifundefined{square}{\let\square\Box}{}    % grumble latex2e 
-\def\QED{\ensuremath{{\square}}}
+% \def\QED{\ensuremath{{\square}}}
 \def\markatright#1{\leavevmode\unskip\nobreak\quad\hspace*{\fill}{#1}}
-\def\qed{\ifneedqed\markatright{\QED}\global\needqedfalse\else\null\fi}
+\def\qed{\ifneedqed\markatright{\ensuremath{{\square}}}\global\needqedfalse\else\null\fi}
 \newproof{proof}{Proof\global\needqedtrue}[\qed]
 \newproof{sketch}{Proof Sketch\global\needqedtrue}[\qed]
 
