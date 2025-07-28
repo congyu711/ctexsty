@@ -2,21 +2,19 @@
 
 \usepackage[sans]{myctex}
 \usepackage{algo}
+\usepackage{metalogo}
 
-
-\title{思源黑体 + FiraGO}
+\title{Template for \XeLaTeX }
 \author{丛宇}
 \date{\today}
 
 \usepackage{bm}
 \begin{document}
 \maketitle
-\begin{center}
-{\Large{\bfseries Test of the font {\scshape Fira Math}.}}\bigskip\\
-{\Large\verb|\usepackage[fira]{fontsetup}|}
-%\medskip\\
-%{\verb|\usepackage[romanfamily=bright-osf]{lucimatx}|} if you want old-style figures (like this: \oldstylenums{1695})\\
-\end{center}
+\begin{algo}
+sans $\to$ lato + 思源黑体\\
+serif $\to$ charter + 思源宋体
+\end{algo}
 
 The default math mode font is $Math\ Italic$. This should not be
 confused with ordinary \emph{Text Italic} -- notice the different spacing\,!

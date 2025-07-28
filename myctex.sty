@@ -12,15 +12,17 @@
 
 % Now use the conditional
 \ifmyctex@sans
-\setCJKmainfont{Source Han Sans SC}
+\setCJKmainfont{Source Han Sans SC}[BoldFont=*, ItalicFont=*]
 \setCJKsansfont{Source Han Sans SC}
 \setCJKmonofont{Source Han Sans SC}
-\RequirePackage[fira]{fontsetup}
-\RequirePackage{FiraMono}
-\setmathfont{Fira Math}[range=\setminus]
+% \RequirePackage[fira]{fontsetup}
+% \RequirePackage{FiraMono}
+% \setmathfont{Fira Math}[range=\setminus]
+\usepackage[default]{lato}
+\usepackage{lete-sans-math}
 
 \else
-\setCJKmainfont{Source Han Serif SC}
+\setCJKmainfont{Source Han Serif SC}[BoldFont=*, ItalicFont=*]
 \setCJKsansfont{Source Han Serif SC}
 \setCJKmonofont{Source Han Serif SC}
 \RequirePackage[charter]{mathdesign} % math font only for serif mode
@@ -29,7 +31,7 @@
 % \setCJKmainfont{SourceHanSerifSC-Regular.otf}[BoldFont={SourceHanSerifSC-Bold.otf}, ItalicFont=SourceHanSerifSC-Regular.otf]
 
 \RequirePackage[margin=1in]{geometry}
-\RequirePackage{latexsym,amsmath}
+\RequirePackage{amsmath}
 \RequirePackage[dvipsnames]{xcolor}
 
 \RequirePackage[colorlinks=true,urlcolor=Blue,citecolor=Green,linkcolor=BrickRed,unicode]{hyperref}
