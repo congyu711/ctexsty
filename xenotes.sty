@@ -1,17 +1,17 @@
-\ProvidesPackage{myctex}
+\ProvidesPackage{xenotes}
 \RequirePackage[fontset=none, scheme=plain]{ctex}
 \RequirePackage{fontspec}
 
-\newif\ifmyctex@sans
-\myctex@sansfalse % Default is serif
+\newif\ifxenotes@sans
+\xenotes@sansfalse % Default is serif
 
 % Declare and process options
-\DeclareOption{sans}{\myctex@sanstrue}
-\DeclareOption*{\PackageWarning{myctex}{Unknown option `\CurrentOption'}}
+\DeclareOption{sans}{\xenotes@sanstrue}
+\DeclareOption*{\PackageWarning{xenotes}{Unknown option `\CurrentOption'}}
 \ProcessOptions\relax
 
 % Now use the conditional
-\ifmyctex@sans
+\ifxenotes@sans
 \setCJKmainfont{Source Han Sans SC}[BoldFont=*, ItalicFont=*]
 \setCJKsansfont{Source Han Sans SC}
 \setCJKmonofont{Source Han Sans SC}
